@@ -1,0 +1,22 @@
+<head>
+  <title>Meteor TV</title>
+</head>
+ 
+<body>
+    <header>
+      <h1>Meteor TV</h1>
+    </header>
+    <form class="yt-url">
+      <input type="text" name="text" placeholder="Type to add a video"/>
+    </form>
+    <div id="player"></div>
+    {{#each playlist}}
+      {{>plitem}}
+    {{/each}}
+</body>
+ 
+<template name="plitem">
+  <li>
+    {{ytUrl}} <button id="play">Play</button> <button id="delete">&times;</button>
+  </li>
+</template>
